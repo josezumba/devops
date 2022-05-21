@@ -18,6 +18,7 @@ jobs:
       - name: Paso2 - Set  up JDK
         uses: actions/setup-java@v3
         with:
+          distribution: 'zulu'
           java-version: 8
         
       # Runs a single command using the runners shell
