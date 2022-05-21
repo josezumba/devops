@@ -38,11 +38,11 @@ jobs:
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
-          args: set image --record deployment.apps/ms-devops ms-devops=${{ github.repository }}:${{ github.sha }}
+          args: set image --record deployment.apps/ms-devops ms-devops=${{ github.repository }}:${{ github.sha }} -n desarrollo
       - name: verify deployment
         uses: steebchen/kubectl@master
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
           KUBECTL_VERSION: "1.20"
         with:
-          args: '"rollout status deployment.apps/ms-devops"'
+          args: '"rollout status deployment.apps/ms-devops -n desarrollo"'
