@@ -22,8 +22,8 @@ jobs:
           java-version: 8
         
       # Runs a single command using the runners shell
-#      - name: Paso 3 - Build Maven Project
-#        run: mvn clean install -DskipTests -U
+      - name: Paso 3 - Build Maven Project
+        run: mvn clean install -DskipTests -U
 
       # Runs a set of commands using the runners shell
 #      - name: Paso 4 - Docker build and push docker hub
